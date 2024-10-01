@@ -1,21 +1,17 @@
-// Quais o possiveis tipos de texto ?
-// - Texto: Pode ser span ou paragraph
-// - Titulos: Que são a familia H de tags
-// - Legendas: Texto que irao em baixo de textos principais ou imagens
-//
-//
-// # Span, Paragraph e legendas podem ser um Component só utilizando a técnica de DynamicComponent
 import { ReactNode, FC, HTMLAttributes } from 'react'
 import { styled, css, RuleSet } from 'styled-components'
 
-type TextTypes = 'h1' | 'h2' | 'h3' | 'h4' | 'span' | 'p'
+type TextTypes = 'text' | 'title'
+type TextSizes = 'small' | 'medium' | 'large'
+type TextElements = 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4'
 
 const BaseStyledTypograph = styled.p`
   color: red;
 `
 
 type TypographProps = {
-  as: TextTypes,
+  as?: TextElements,
+  size?: TextSizes,
   props?: HTMLAttributes<HTMLElement>,
   children: ReactNode
 }
@@ -26,17 +22,11 @@ const BaseTextStyle = css`
   line-height: 155%;
 `
 
-const GetTextProperties: (type: TextTypes) => RuleSet<object> = (type) => {
-  const fontSizes = {
-    'h1': '64px',
-    'h2': '56px',
-    'h3': '48px',
-    'h4': '32px',
-    'p': '18px',
-    'span': '18px',
-  }
+const GetTextProperties: (type?: TextElements, size?: TextSizes) => RuleSet<object> = (type = 'p', size = 'medium') => {
+  const textType: TextTypes = type.startsWith('h') ? 'title' : 'text'
+
   return css`
-    font-size: ${fontSizes[type]}
+    font-size: ${props => props.theme[textType][size]}
 `
 }
 
@@ -51,5 +41,5 @@ export const DynamicTypograph: FC<TypographProps> = ({ children, props, as = 'p'
 
 export const TypographParagraph = styled(DynamicTypograph)`
   ${BaseTextStyle}
-  ${props => GetTextProperties(props.as)}
+  ${props => GetTextProperties(props.as, props.size)}
 `
