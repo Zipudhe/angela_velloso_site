@@ -18,7 +18,7 @@ type TypographProps = {
 
 const BaseTextStyle = css`
   color: #FFF;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.3rem;
   line-height: 155%;
 `
 
