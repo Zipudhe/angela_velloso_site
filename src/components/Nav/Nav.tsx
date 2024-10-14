@@ -34,7 +34,6 @@ export const Nav = (): React.ReactNode => {
 
 
 const DesktopLinks = () => {
-  console.log("rendering desktop")
 
   return (
     <Links />
