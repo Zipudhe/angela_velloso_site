@@ -15,7 +15,7 @@ import YoutubeIcon from '../../assets/icons/youtube.svg'
 export const MediaSection: FC = () => {
 
   return (
-    <IconsWrapper>
+    <IconsWrapper id="media">
       <a target='_blank' href='https://www.instagram.com/angela_velloso/' >
         <Icon path={InstagramIcon} />
       </a>

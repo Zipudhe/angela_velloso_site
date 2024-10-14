@@ -13,7 +13,7 @@ Interdum aliquet phasellus natoque senectus nulla; himenaeos convallis porta. Da
 
 export const AboutSection: FC = () => {
 
-  return <Wrapper>
+  return <Wrapper id="sobre">
     <TypographParagraph as="h1" > About Section </TypographParagraph>
     <TypographParagraph as="p" > {mockedText} </TypographParagraph>
   </Wrapper>

@@ -1,6 +1,6 @@
 "use client"
 
-import React, { ForwardedRef, HTMLAttributes, useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   NavStyled,
   LinksDivStyled,
@@ -34,6 +34,7 @@ export const Nav = (): React.ReactNode => {
 
 
 const DesktopLinks = () => {
+  console.log("rendering desktop")
 
   return (
     <Links />
@@ -77,7 +78,7 @@ const Links = (props: { toggleMenu?: () => void }) => {
   return (
     <LinksUl>
       <li>
-        <LinkStyled onClick={props.toggleMenu} target="_new" rel="noopener"> Sobre </LinkStyled>
+        <LinkStyled onClick={props.toggleMenu} target="#sobre" rel="noopener"> Sobre </LinkStyled>
       </li>
       <li>
         <LinkStyled onClick={props.toggleMenu} > Discografia </LinkStyled>
