@@ -77,25 +77,25 @@ const Links = (props: { toggleMenu?: () => void }) => {
   return (
     <LinksUl>
       <li>
-        <LinkStyled onClick={props.toggleMenu} target="#sobre" rel="noopener"> Sobre </LinkStyled>
+        <LinkStyled onClick={props.toggleMenu} href="#sobre" rel="noopener"> Sobre </LinkStyled>
       </li>
       <li>
-        <LinkStyled onClick={props.toggleMenu} > Discografia </LinkStyled>
+        <LinkStyled onClick={props.toggleMenu} href="#discografia" > Discografia </LinkStyled>
       </li>
       <li>
-        <LinkStyled onClick={props.toggleMenu} > Shows </LinkStyled>
+        <LinkStyled onClick={props.toggleMenu} href="#shows" > Shows </LinkStyled>
       </li>
       <li>
-        <LinkStyled onClick={props.toggleMenu} > Projetos </LinkStyled>
+        <LinkStyled onClick={props.toggleMenu} href="#projetos" > Projetos </LinkStyled>
       </li>
       <li>
-        <LinkStyled onClick={props.toggleMenu} > Galeria </LinkStyled>
+        <LinkStyled onClick={props.toggleMenu} href="#galeria"> Galeria </LinkStyled>
       </li>
       <li>
-        <LinkStyled onClick={props.toggleMenu} > Videos </LinkStyled>
+        <LinkStyled onClick={props.toggleMenu} href="#videos"> Videos </LinkStyled>
       </li>
       <li>
-        <LinkStyled onClick={props.toggleMenu} > Contato </LinkStyled>
+        <LinkStyled onClick={props.toggleMenu} href="#contatos" > Contato </LinkStyled>
       </li>
     </LinksUl>
   )

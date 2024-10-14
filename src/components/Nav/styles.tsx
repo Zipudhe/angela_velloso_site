@@ -95,6 +95,7 @@ export const LinksUl = styled.ul`
     text-transform: uppercase;
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
 
   &:focus {

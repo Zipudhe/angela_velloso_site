@@ -14,7 +14,7 @@ export default function Home() {
           <AboutSection />
           <MediaSection />
         </main>
-        <footer className={styles.footer}>
+        <footer id="footer" className={styles.footer}>
           <TypographParagraph as="h1" > Footer </TypographParagraph>
           <TypographParagraph as={"span"} > icons by <a target="_blank" href="https://icons8.com">Icons8</a> </TypographParagraph>
         </footer>
