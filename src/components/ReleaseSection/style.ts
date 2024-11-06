@@ -8,12 +8,19 @@ export const MainSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
 `
 
 export const CardWrapper = styled.div`
   min-height: 300px;
   width: 100%;
+  
+  display: flex;
+  justify-content: space-evenly;
 
 
-  border: 1px solid white;
+  @media (max-width: 920px) {
+    overflow-y: hidden;
+    border: 1px solid white;
+  }
 `
