@@ -87,13 +87,15 @@ export const LinksUl = styled.ul`
   width: 100%;
   height: 100%;
   padding: 0.5rem;
-  min-height: 200px;
   justify-content: space-evenly;
   gap: 1rem;
   list-style-type: none;
 
   > li {
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
   }
 
   &:focus {
