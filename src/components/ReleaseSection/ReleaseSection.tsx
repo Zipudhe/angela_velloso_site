@@ -15,7 +15,6 @@ export const ReleaseSection: FC = () => {
 
   return (
     <MainSection>
-      <TypographParagraph as="h2" > ÚLTIMOS LANÇAMENTOS </TypographParagraph>
       <CardWrapper>
         <ReleaseCard title={mockedCard.title} alt={mockedCard.alt} img={mockedCard.img} />
         <ReleaseCard title={mockedCard.title} alt={mockedCard.alt} img={mockedCard.img} />
