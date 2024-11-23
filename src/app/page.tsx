@@ -6,6 +6,7 @@ import { TypographParagraph } from '../components/Typograph'
 import { AboutSection } from '../components/AboutSection/AboutSection'
 import { MediaSection } from '../components/MediaSection/MediaSection'
 import { ReleaseSection } from "@/components/ReleaseSection/ReleaseSection";
+import { Shows } from "@/components/Shows/Shows";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <AboutSection />
         <MediaSection />
         <ReleaseSection />
+        <Shows shows={[]} />
       </main>
       <footer id="footer" className={styles.footer}>
         <TypographParagraph as="h1" > Footer </TypographParagraph>

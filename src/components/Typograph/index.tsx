@@ -6,7 +6,7 @@ type TextSizes = 'small' | 'medium' | 'large'
 type TextElements = 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4'
 
 const BaseStyledTypograph = styled.p`
-  color: red;
+  color: #FFF;
 `
 
 type TypographProps = {
