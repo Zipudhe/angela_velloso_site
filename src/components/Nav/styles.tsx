@@ -35,8 +35,6 @@ export const LinkStyled = styled.a`
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.2rem;
-
-  
 `
 
 export const IconStyled = styled.div`

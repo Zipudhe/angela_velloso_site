@@ -1,7 +1,6 @@
-import { ReactNode, FC, HTMLAttributes } from 'react'
+import { ReactNode, FC, HTMLAttributes, CSSProperties } from 'react'
 import { styled, css, RuleSet } from 'styled-components'
 
-type TextTypes = 'text' | 'title'
 type TextSizes = 'small' | 'medium' | 'large'
 type TextElements = 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4'
 
@@ -13,6 +12,7 @@ type TypographProps = {
   as?: TextElements,
   size?: TextSizes,
   props?: HTMLAttributes<HTMLElement>,
+  style?: RuleSet<object>
   children: ReactNode
 }
 
@@ -22,11 +22,12 @@ const BaseTextStyle = css`
   line-height: 155%;
 `
 
-const GetTextProperties: (type?: TextElements, size?: TextSizes) => RuleSet<object> = (type = 'p', size = 'medium') => {
-  const textType: TextTypes = type.startsWith('h') ? 'title' : 'text'
+const GetTextProperties: (type?: TextElements, size?: TextSizes, style?: RuleSet<object>) => RuleSet<object> = (type = 'p', size = 'medium', style) => {
+  console.log({ style })
 
   return css`
-    font-size: ${props => props.theme[textType][size]}
+    font-size: ${props => props.theme.fontThemes[type][size]}
+    ${style}
 `
 }
 
@@ -41,5 +42,5 @@ export const DynamicTypograph: FC<TypographProps> = ({ children, props, as = 'p'
 
 export const TypographParagraph = styled(DynamicTypograph)`
   ${BaseTextStyle}
-  ${props => GetTextProperties(props.as, props.size)}
+  ${props => GetTextProperties(props.as, props.size, props.style)},
 `
