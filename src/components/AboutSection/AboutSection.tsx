@@ -4,6 +4,7 @@ import React, { FC } from 'react';
 
 import { TypographParagraph } from '../Typograph'
 import { Wrapper } from './styles'
+import { Section } from '../Section/Section'
 
 const mockedText = `
 Lorem ipsum odor amet, consectetuer adipiscing elit. Natoque integer penatibus cras bibendum hac tincidunt cubilia. Natoque eu auctor vehicula natoque malesuada efficitur blandit dictum. Habitasse fusce facilisi laoreet nascetur at lobortis nostra bibendum. Neque nullam ultricies accumsan himenaeos; habitasse eros efficitur turpis. Nec sed etiam ad facilisi feugiat inceptos aenean imperdiet vitae. Per ridiculus nullam potenti libero at hac ut aliquam. Iaculis et lobortis turpis nunc orci aenean maximus ultricies. Mi bibendum aliquet aliquet eros ornare faucibus nullam donec.
@@ -13,8 +14,8 @@ Interdum aliquet phasellus natoque senectus nulla; himenaeos convallis porta. Da
 
 export const AboutSection: FC = () => {
 
-  return <Wrapper>
+  return <Section id="sobre" title="Angela Velloso">
     <TypographParagraph as="p" > {mockedText} </TypographParagraph>
-  </Wrapper>
+  </Section>
 }
 

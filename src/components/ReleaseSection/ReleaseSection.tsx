@@ -2,8 +2,8 @@
 
 import React, { FC } from "react"
 import { CardWrapper, MainSection } from './style'
-import { TypographParagraph } from '../Typograph'
 import { ReleaseCard, IReleaseCard } from '../ReleaseCard/ReleaseCard'
+import { Section } from "../Section/Section";
 
 export const ReleaseSection: FC = () => {
 
@@ -14,7 +14,7 @@ export const ReleaseSection: FC = () => {
   } as IReleaseCard
 
   return (
-    <MainSection>
+    <Section id="release" title="Ultimos lançamentos" >
       <CardWrapper>
         <ReleaseCard title={mockedCard.title} alt={mockedCard.alt} img={mockedCard.img} />
         <ReleaseCard title={mockedCard.title} alt={mockedCard.alt} img={mockedCard.img} />
@@ -22,6 +22,6 @@ export const ReleaseSection: FC = () => {
         <ReleaseCard title={mockedCard.title} alt={mockedCard.alt} img={mockedCard.img} />
         <ReleaseCard title={mockedCard.title} alt={mockedCard.alt} img={mockedCard.img} />
       </CardWrapper>
-    </MainSection>
+    </Section>
   )
 }

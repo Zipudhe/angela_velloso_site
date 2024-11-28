@@ -11,6 +11,6 @@ export const SectionWrapper = styled.section`
   align-items: center;
   
   h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 `
