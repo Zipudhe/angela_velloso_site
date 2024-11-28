@@ -4,9 +4,9 @@ export const Card = styled.div`
   width: 20vw;
   max-width: 400px;
 
-  height: fit-content;
-  min-height: 400px;
-  max-height: 520px;
+  height: min-content;
+  min-height: 500px;
+  max-height: 620px;
 
   display: flex;
   flex-direction: column;
@@ -14,9 +14,7 @@ export const Card = styled.div`
   justify-content: space-evenly;
   border-radius: 8px;
 
-  padding: 32px 16px;
   background-color: #5F5F5F;
-  gap: 12px;
 
 
   hr {
@@ -29,7 +27,12 @@ export const CardSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
 
-  padding: 4px;
+  * {
+    margin: 0;
+  }
+
+  :nth-child(2) {
+    margin-top: 1rem;
+  }
 `

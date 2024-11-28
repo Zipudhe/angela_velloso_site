@@ -1,6 +1,6 @@
 "use client"
 import React, { FC } from 'react'
-import { Show } from '../Shows/Shows'
+import { Show } from '../ShowSection/ShowSection'
 import { Card, CardSection } from './style'
 import { TypographParagraph } from '../Typograph'
 
@@ -23,13 +23,18 @@ export const ShowCard: FC<Show> = ({ date, title, location, link }) => {
         <TypographParagraph as="h2"> {title} </TypographParagraph>
       </CardSection>
       <CardSection>
-        <TypographParagraph as="h3"> Local: </TypographParagraph>
-        <TypographParagraph> {location} </TypographParagraph>
+        <TypographParagraph as="h3" > Local: </TypographParagraph>
+        <TypographParagraph size="large" > {location} </TypographParagraph>
       </CardSection>
-      <CardSection>
-        <TypographParagraph as="h3"> Link: </TypographParagraph>
-        <TypographParagraph> {link} </TypographParagraph>
-      </CardSection>
+      {
+        link ?
+          <CardSection>
+            <TypographParagraph as="h3"> Link: </TypographParagraph>
+            <TypographParagraph> {link} </TypographParagraph>
+          </CardSection>
+          :
+          null
+      }
     </Card>
   )
 }
