@@ -5,15 +5,8 @@ interface IApplicationTheme {
   children: React.ReactNode
 }
 
-/*
- * h3 -> small: 16px | medium: 18px | large: 24px
- * h2 -> small: 24px | medium: 32px | large 40px
- * h1 -> small: 40px | medium: 48px | large: 56px
- */
-
 export const ApplicationTheme: FC<IApplicationTheme> = ({ children }) => {
 
-  // Input:  tag + size | Example p + medium
   const fontSizes = {
     small: '16px;',
     medium: '18px;',
@@ -47,16 +40,31 @@ export const ApplicationTheme: FC<IApplicationTheme> = ({ children }) => {
     large: fontSizes.large,
   }
 
-  const fontThemes = {
+  const typography = {
     p,
     h1,
     h2,
     h3
   }
 
+  const colors = {
+    main: '#1B0000',
+    secondary: '#CFC6A3',
+    terceary: '#0593DD'
+  }
+
+  const main = {
+    main_bg: colors.main,
+    secondary_bg: colors.secondary,
+    terceary_bg: colors.terceary,
+    on_main: colors.secondary,
+    on_secondary: '#000',
+  }
+
 
   const theme = {
-    fontThemes,
+    typography,
+    main
   }
 
   return (
@@ -64,5 +72,4 @@ export const ApplicationTheme: FC<IApplicationTheme> = ({ children }) => {
       {children}
     </ThemeProvider>
   )
-
 }

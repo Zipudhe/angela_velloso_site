@@ -1,8 +1,7 @@
 "use client"
 
 import React, { FC } from 'react'
-import Image from "next/image"
-import BlurData from '../../assets/icons/blurimage.png'
+import { StyledImage } from './style'
 
 interface IIcon {
   path: string
@@ -11,13 +10,15 @@ interface IIcon {
 
 export const Icon: FC<IIcon> = ({ path, name }) => {
 
+  const instagram_path = "../../assets/icons/instagram.svg"
+
   return (
-    <Image
+    <StyledImage
       id={name ?? ''}
       alt={name ?? ''}
       src={path}
       placeholder='blur'
-      blurDataURL="../../assets/icons/blurimage.png"
+      blurDataURL={"../../assets/icons/blurimage.png"}
     />
   )
 }

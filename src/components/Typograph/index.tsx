@@ -1,11 +1,11 @@
-import { ReactNode, FC, HTMLAttributes, CSSProperties } from 'react'
+import { ReactNode, FC, HTMLAttributes } from 'react'
 import { styled, css, RuleSet } from 'styled-components'
 
 type TextSizes = 'small' | 'medium' | 'large'
 type TextElements = 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4'
 
 const BaseStyledTypograph = styled.p`
-  color: #FFF;
+  color: ${props => props.theme.main.on_main};
 `
 
 type TypographProps = {
@@ -17,16 +17,15 @@ type TypographProps = {
 }
 
 const BaseTextStyle = css`
-  color: #FFF;
+  color: ${props => props.theme.main.on_main};
   letter-spacing: 0.3rem;
   line-height: 155%;
 `
 
 const GetTextProperties: (type?: TextElements, size?: TextSizes, style?: RuleSet<object>) => RuleSet<object> = (type = 'p', size = 'medium', style) => {
-  console.log({ style })
 
   return css`
-    font-size: ${props => props.theme.fontThemes[type][size]}
+    font-size: ${props => props.theme.typography[type][size]}
     ${style}
 `
 }

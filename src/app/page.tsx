@@ -1,7 +1,7 @@
 "use client"
 
 import { ApplicationTheme } from "@/libs/theme";
-import styles from "./page.module.css";
+import { StyledMain } from './style'
 import { AboutSection } from '@/components/AboutSection/AboutSection'
 import { MediaSection } from '@/components/MediaSection/MediaSection'
 import { ReleaseSection } from "@/components/ReleaseSection/ReleaseSection";
@@ -11,13 +11,13 @@ import { ContactSection } from "@/components/ContactSection/ContactSection";
 export default function Home() {
   return (
     <ApplicationTheme>
-      <main className={styles.main}>
+      <StyledMain>
         <AboutSection />
         <MediaSection />
         <ReleaseSection />
         <ShowSection />
         <ContactSection />
-      </main>
+      </StyledMain>
     </ApplicationTheme>
   );
 }
