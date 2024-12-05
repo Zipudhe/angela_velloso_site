@@ -1,7 +1,8 @@
 import { styled } from 'styled-components'
-import Image from "next/image"
 
-export const StyledImage = styled(Image)`
-  color: black;
-
+export const StyledIcon = styled.div`
+  
+  > svg {
+    fill: ${props => props.theme.main.terceary_bg}
+  }
 `

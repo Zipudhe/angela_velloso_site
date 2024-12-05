@@ -1,24 +1,41 @@
 "use client"
 
 import React, { FC } from 'react'
-import { StyledImage } from './style'
+import {
+  FaInstagram,
+  FaDeezer,
+  FaItunes,
+  FaSpotify,
+  FaWhatsapp,
+  FaSoundcloud,
+  FaYoutube
+} from 'react-icons/fa'
+import { StyledIcon } from './style'
+
+type AvailableIcons = "instagram" | "deezer" | "itunes" | "spotify" | "whatsapp" | "soundcloud" | "youtube"
 
 interface IIcon {
-  path: string
-  name?: string
+  name: AvailableIcons
 }
 
-export const Icon: FC<IIcon> = ({ path, name }) => {
+const IconsOptions = {
+  instagram: FaInstagram,
+  deezer: FaDeezer,
+  itunes: FaItunes,
+  spotify: FaSpotify,
+  whatsapp: FaWhatsapp,
+  soundcloud: FaSoundcloud,
+  youtube: FaYoutube
+}
 
-  const instagram_path = "../../assets/icons/instagram.svg"
+export const Icon: FC<IIcon> = ({ name }) => {
+
+  const SelectedIcon = IconsOptions[name]
+  console.log({ SelectedIcon })
 
   return (
-    <StyledImage
-      id={name ?? ''}
-      alt={name ?? ''}
-      src={path}
-      placeholder='blur'
-      blurDataURL={"../../assets/icons/blurimage.png"}
-    />
+    <StyledIcon>
+      {SelectedIcon ? <SelectedIcon size={48} /> : <span> Fallback </span>}
+    </StyledIcon>
   )
 }
