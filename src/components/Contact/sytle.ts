@@ -21,7 +21,7 @@ export const ContactLink = styled(LinkStyled)`
   display: flex;
   align-items: center;
 
-  img {
+  >:first-child {
       margin-right: 2rem;
   }
 `

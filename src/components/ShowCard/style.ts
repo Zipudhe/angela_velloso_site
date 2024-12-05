@@ -14,12 +14,12 @@ export const Card = styled.div`
   justify-content: space-evenly;
   border-radius: 8px;
 
-  background-color: #5F5F5F;
+  background-color: ${props => props.theme.main.contrast};
 
 
   hr {
     width: 80%;
-    color: #0593DD;
+    color: ${props => props.theme.main.terceary_bg};
   }
 `
 
