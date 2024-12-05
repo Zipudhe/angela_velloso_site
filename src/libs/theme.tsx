@@ -50,7 +50,8 @@ export const ApplicationTheme: FC<IApplicationTheme> = ({ children }) => {
   const colors = {
     main: '#1B0000',
     secondary: '#CFC6A3',
-    terceary: '#0593DD'
+    terceary: '#0593DD',
+    contrast: '#272323'
   }
 
   const main = {
@@ -59,6 +60,7 @@ export const ApplicationTheme: FC<IApplicationTheme> = ({ children }) => {
     terceary_bg: colors.terceary,
     on_main: colors.secondary,
     on_secondary: '#000',
+    contrast: colors.contrast
   }
 
 
