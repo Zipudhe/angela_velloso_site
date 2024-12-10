@@ -20,6 +20,8 @@ const BaseTextStyle = css`
   color: ${props => props.theme.main.on_main};
   letter-spacing: 0.3rem;
   line-height: 155%;
+
+  font-famiy: var(--diary-font);
 `
 
 const GetTextProperties: (type?: TextElements, size?: TextSizes, style?: RuleSet<object>) => RuleSet<object> = (type = 'p', size = 'medium', style) => {

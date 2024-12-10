@@ -14,7 +14,7 @@ Interdum aliquet phasellus natoque senectus nulla; himenaeos convallis porta. Da
 
 export const AboutSection: FC = () => {
 
-  return <Section id="sobre" title="Angela Velloso">
+  return <Section id="sobre" title="ANGELA VELLOSO">
     <TypographParagraph as="p" > {mockedText} </TypographParagraph>
   </Section>
 }
