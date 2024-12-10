@@ -1,9 +1,43 @@
 import React, { FC } from 'react'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider, createGlobalStyle } from 'styled-components'
 
 interface IApplicationTheme {
   children: React.ReactNode
 }
+
+const GlobalStyles = createGlobalStyle`
+  body {
+    background-color: ${props => props.theme.main.main_bg};
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  main {
+    padding: 0 2rem;
+    width: 100%;
+    max-width: 2000px;
+    min-height: 100vh;
+
+    background-color: ${props => props.theme.main.main_bg};
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100vw;
+  }
+
+  a {
+    color: ${props => props.theme.main.on_main};
+    text-decoration: none;
+  }
+`
 
 export const ApplicationTheme: FC<IApplicationTheme> = ({ children }) => {
 
@@ -71,6 +105,7 @@ export const ApplicationTheme: FC<IApplicationTheme> = ({ children }) => {
 
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyles />
       {children}
     </ThemeProvider>
   )
