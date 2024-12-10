@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 
 export const NavStyled = styled.nav`
-  width: 100%;
-  max-width: 1950px;
+  width: 100vw;
   position: absolute;
   height: 15vh;
   max-height: 100px;
