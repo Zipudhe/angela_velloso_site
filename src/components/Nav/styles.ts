@@ -54,19 +54,18 @@ export const MenuWrapper = styled.div`
   justify-content: end;
 
   cursor: pointer;
-  overflow-x: hidden;
 `
 
 export const MenuDiv = styled.div<{ isVisible?: boolean }>`
   position: absolute;
+  left: -10%;
   top: 100%;
-  right: -150px;
   width: 100%;
   max-width: 200px;
   height: auto;
   overflow: hidden;
   background-color: black;
-  transform: translateX(${props => props.isVisible ? '-75%' : '100%'});
+  transform: translateX(${props => props.isVisible ? '-10%' : '100%'});
 
   display: flex;
   flex-direction: column;

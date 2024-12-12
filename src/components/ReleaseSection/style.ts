@@ -19,8 +19,15 @@ export const CardWrapper = styled.div`
   justify-content: space-evenly;
 
 
-  @media (max-width: 920px) {
-    overflow-y: hidden;
-    border: 1px solid white;
-  }
+  @media(max-width: 900px) {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    gap: 1.5rem;
+    justify-content: start;
+
+    scroll-snap-type: x mandatory;
+
+    > * {
+      scroll-snap-align: center;
+    }
 `

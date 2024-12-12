@@ -2,9 +2,6 @@ import styled from 'styled-components';
 import { IMenuButton } from './MenuButton'
 
 export const StyledBurger = styled.button<IMenuButton>`
-  position: absolute;
-  top: 30%;
-  right: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -14,7 +11,8 @@ export const StyledBurger = styled.button<IMenuButton>`
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
+
+  margin-right: 2rem;
   
   &:focus {
     outline: none;

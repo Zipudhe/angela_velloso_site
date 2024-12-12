@@ -3,7 +3,6 @@
 import React, { FC } from 'react';
 
 import { TypographParagraph } from '../Typograph'
-import { Wrapper } from './styles'
 import { Section } from '../Section/Section'
 
 const mockedText = `

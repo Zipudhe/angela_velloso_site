@@ -12,10 +12,14 @@ const GlobalStyles = createGlobalStyle`
     flex-direction: column;
 
     align-items: center;
+
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 
   main {
-    padding: 0 2rem;
+    padding: 2rem;
     width: 100%;
     max-width: 2000px;
     min-height: 100vh;
@@ -29,13 +33,15 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body {
-    width: 100vw;
-  }
-
   a {
     color: ${props => props.theme.main.on_main};
     text-decoration: none;
+  }
+
+  @media(max-width: 900px) {
+    main {
+      background-color: red;
+    }
   }
 `
 

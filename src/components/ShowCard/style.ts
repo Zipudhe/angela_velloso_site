@@ -3,6 +3,7 @@ import { styled } from 'styled-components'
 export const Card = styled.div`
   width: 20vw;
   max-width: 400px;
+  min-width: fit-content;
 
   height: min-content;
   min-height: 500px;
@@ -20,6 +21,14 @@ export const Card = styled.div`
   hr {
     width: 80%;
     color: ${props => props.theme.main.terceary_bg};
+  }
+
+  @media(max-width: 900px) {
+    padding: 0 1rem;
+
+    .local {
+      display: none;
+    }
   }
 `
 
