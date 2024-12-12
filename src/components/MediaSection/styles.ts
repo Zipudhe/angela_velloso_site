@@ -16,4 +16,13 @@ export const IconsWrapper = styled.section`
   img {
     width: 40px;
   }
+
+  @media(max-width: 900px) {
+    display: grid;
+    place-items: center;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(3, minmax(0, 50px));
+  
+    max-height: min-content;
+  }
 `
