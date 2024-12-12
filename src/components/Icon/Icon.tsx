@@ -31,7 +31,6 @@ const IconsOptions = {
 export const Icon: FC<IIcon> = ({ name }) => {
 
   const SelectedIcon = IconsOptions[name]
-  console.log({ SelectedIcon })
 
   return (
     <StyledIcon>

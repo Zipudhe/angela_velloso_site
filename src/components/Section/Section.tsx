@@ -10,7 +10,6 @@ interface ISection {
 }
 
 export const Section: FC<ISection> = ({ title, children, ...props }) => {
-  console.log({ children, title })
 
   return (
     <SectionWrapper {...props} >
