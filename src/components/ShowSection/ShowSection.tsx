@@ -1,6 +1,6 @@
 "use client" // Futuramente sera alterado para ser um server side component para já trazer com os dados do spotify ou fonte dos shows
 import React, { FC } from 'react'
-import { ShowsWrapper, Wrapper } from './stype'
+import { ShowsWrapper } from './stype'
 import { ShowCard } from '../ShowCard/ShowCard'
 import { Section } from '../Section/Section'
 
@@ -9,10 +9,6 @@ export type Show = {
   title: string,
   location?: string,
   link?: string
-}
-
-interface IShows {
-  shows: Show[]
 }
 
 export const ShowSection: FC = () => {

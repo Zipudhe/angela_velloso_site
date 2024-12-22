@@ -20,7 +20,6 @@ export const Nav = (): React.ReactNode => {
 
   return (
     <NavStyled>
-      <IconStyled />
       <LinksDivStyled>
         {isMobile ?
           <MobileLinks />
@@ -28,6 +27,7 @@ export const Nav = (): React.ReactNode => {
           <DesktopLinks />
         }
       </LinksDivStyled>
+      <IconStyled />
     </NavStyled>
   )
 }
@@ -80,19 +80,10 @@ const Links = (props: { toggleMenu?: () => void }) => {
         <LinkStyled onClick={props.toggleMenu} href="#sobre" rel="noopener"> Sobre </LinkStyled>
       </li>
       <li>
-        <LinkStyled onClick={props.toggleMenu} href="#discografia" > Discografia </LinkStyled>
+        <LinkStyled onClick={props.toggleMenu} href="#release" > Lançamentos </LinkStyled>
       </li>
       <li>
         <LinkStyled onClick={props.toggleMenu} href="#shows" > Shows </LinkStyled>
-      </li>
-      <li>
-        <LinkStyled onClick={props.toggleMenu} href="#projetos" > Projetos </LinkStyled>
-      </li>
-      <li>
-        <LinkStyled onClick={props.toggleMenu} href="#galeria"> Galeria </LinkStyled>
-      </li>
-      <li>
-        <LinkStyled onClick={props.toggleMenu} href="#videos"> Videos </LinkStyled>
       </li>
       <li>
         <LinkStyled onClick={props.toggleMenu} href="#contatos" > Contato </LinkStyled>

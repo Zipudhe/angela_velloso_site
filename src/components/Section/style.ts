@@ -13,4 +13,8 @@ export const SectionWrapper = styled.section`
   h2 {
     margin-bottom: 1rem;
   }
+
+  @media(max-width: 900px) {
+    padding: 2rem 0;
+  }
 `

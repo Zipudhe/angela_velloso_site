@@ -22,7 +22,7 @@ export const ShowCard: FC<Show> = ({ date, title, location, link }) => {
       <CardSection>
         <TypographParagraph as="h2"> {title} </TypographParagraph>
       </CardSection>
-      <CardSection>
+      <CardSection className="local">
         <TypographParagraph as="h3" > Local: </TypographParagraph>
         <TypographParagraph size="large" > {location} </TypographParagraph>
       </CardSection>

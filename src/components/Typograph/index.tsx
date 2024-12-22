@@ -22,6 +22,10 @@ const BaseTextStyle = css`
   line-height: 155%;
 
   font-famiy: var(--diary-font);
+  
+  @media(max-width: 900px) {
+    text-align: center;
+  }
 `
 
 const GetTextProperties: (type?: TextElements, size?: TextSizes, style?: RuleSet<object>) => RuleSet<object> = (type = 'p', size = 'medium', style) => {
