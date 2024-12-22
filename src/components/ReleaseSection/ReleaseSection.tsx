@@ -1,11 +1,10 @@
-"use client";
-
 import React, { FC } from "react"
-import { CardWrapper, MainSection } from './style'
+import { CardWrapper } from './style'
 import { ReleaseCard, IReleaseCard } from '../ReleaseCard/ReleaseCard'
 import { Section } from "../Section/Section";
 
-export const ReleaseSection: FC = () => {
+export const ReleaseSection: FC = async () => {
+
 
   const mockedCard = {
     title: "Feijoada abortada (incidental: feijoada completa)",
