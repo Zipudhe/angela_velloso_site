@@ -51,21 +51,21 @@ export const MenuWrapper = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: start;
 
   cursor: pointer;
 `
 
 export const MenuDiv = styled.div<{ isVisible?: boolean }>`
   position: absolute;
-  left: -10%;
+  left: -100%;
   top: 100%;
   width: 100%;
   max-width: 200px;
   height: auto;
   overflow: hidden;
   background-color: black;
-  transform: translateX(${props => props.isVisible ? '-10%' : '100%'});
+  transform: translateX(${props => props.isVisible ? '100vw' : '0'});
 
   display: flex;
   flex-direction: column;

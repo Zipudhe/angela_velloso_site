@@ -12,7 +12,7 @@ export const StyledBurger = styled.button<IMenuButton>`
   cursor: pointer;
   padding: 0;
 
-  margin-right: 2rem;
+  margin-left: 2rem;
   
   &:focus {
     outline: none;

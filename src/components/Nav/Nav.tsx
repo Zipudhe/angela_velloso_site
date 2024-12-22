@@ -20,7 +20,6 @@ export const Nav = (): React.ReactNode => {
 
   return (
     <NavStyled>
-      <IconStyled />
       <LinksDivStyled>
         {isMobile ?
           <MobileLinks />
@@ -28,6 +27,7 @@ export const Nav = (): React.ReactNode => {
           <DesktopLinks />
         }
       </LinksDivStyled>
+      <IconStyled />
     </NavStyled>
   )
 }
