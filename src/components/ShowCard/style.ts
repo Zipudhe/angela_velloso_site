@@ -2,7 +2,7 @@ import { styled } from 'styled-components'
 
 export const Card = styled.div`
   width: 20vw;
-  max-width: 400px;
+  max-width: 300px;
   min-width: fit-content;
 
   height: min-content;
@@ -14,6 +14,7 @@ export const Card = styled.div`
   align-items: center;
   justify-content: space-evenly;
   border-radius: 8px;
+  padding: 0 1rem;
 
   background-color: ${props => props.theme.main.contrast};
 

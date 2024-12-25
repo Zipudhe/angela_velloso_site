@@ -1,4 +1,5 @@
 "use client"
+
 import localFont from 'next/font/local'
 
 import { ApplicationTheme } from "@/libs/theme";
