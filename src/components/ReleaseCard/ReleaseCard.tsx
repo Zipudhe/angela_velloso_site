@@ -13,7 +13,7 @@ export const ReleaseCard: FC<IReleaseCard> = ({ img, title, alt }) => {
   return (
     <Card>
       <CardImage src={img} />
-      <CardTitle as="p" > {title} </CardTitle>
+      <CardTitle as="h3" > {title} </CardTitle>
     </Card>
   )
 }
