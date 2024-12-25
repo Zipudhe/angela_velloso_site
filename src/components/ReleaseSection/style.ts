@@ -19,7 +19,7 @@ export const CardWrapper = styled.div`
   justify-content: space-evenly;
 
 
-  @media(max-width: 900px) {
+  @media(max-width: 920px) {
     overflow-x: scroll;
     scrollbar-width: none;
     gap: 1.5rem;
