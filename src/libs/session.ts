@@ -35,13 +35,22 @@ export const getAuthToken = async () => {
   return res
 }
 
-export const getAuthorization = async (request: NextRequest) => {
-  const token = request.cookies.get("token")?.value
+export const updateAuthToken = async (request: NextRequest) => {
+  const token = request.cookies.get("token")
   if (!token) {
-    console.log('first site access should get a token')
+    return getAuthToken()
+  }
+
+  return
+}
+
+export const getAuthorization = async (request: NextRequest) => {
+  const tokenStore = request.cookies
+  const token = tokenStore.get("token")?.value
+
+  if (!token) {
     return await getAuthToken()
   }
 
-  console.log("Has accessed site before... needs to update token")
   return NextResponse.next()
 }
