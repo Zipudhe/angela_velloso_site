@@ -11,19 +11,21 @@ type ContactData = {
 }
 
 export const Contact: FC<ContactData> = ({ title, details, phone, instagram }) => {
+  const phoneRegex = /(\s*)[-]*/g
+  const cleanPhone = phone?.replace(phoneRegex, "")
 
   return (
     <ContactDiv>
       <TypographParagraph as="h2"> {title} </TypographParagraph>
       {details && <TypographParagraph> {details} </TypographParagraph>}
-      <ContactLink href='http://google.com.br' target='_blank' >
+      <ContactLink href={`https://wa.me/55${cleanPhone}`} target='_blank' >
         <Icon name="whatsapp" />
         {phone}
       </ContactLink>
 
-      <ContactLink href="https://instagram.com.br" target='_blank' >
+      <ContactLink href={`https://instagram.com.br/${instagram}`} target='_blank' >
         <Icon name="instagram" />
-        {instagram}
+        @{instagram}
       </ContactLink>
     </ContactDiv>
   )

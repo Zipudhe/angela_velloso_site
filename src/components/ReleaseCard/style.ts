@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { TypographParagraph } from '../Typograph'
 
-export const Card = styled.div`
+export const Card = styled.a`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,6 +10,7 @@ export const Card = styled.div`
   width: 15vw;
   height: fit-content;
   max-height: 350px;
+  cursor: pointer;
 
   @media (max-width: 920px) {
     min-width: 200px;

@@ -1,9 +1,13 @@
 "use client"
 
-import React, { FC, useEffect, useState } from "react"
+import React, { FC, useEffect, useState, Suspense } from "react"
 import { CardWrapper } from './style'
-import { ReleaseCard, IReleaseCard } from '../ReleaseCard/ReleaseCard'
+import { ReleaseCard } from '../ReleaseCard/ReleaseCard'
 import { Section } from "../Section/Section";
+
+type External_Url = {
+  spotify: string
+}
 
 type Image = {
   url: string,
@@ -11,9 +15,9 @@ type Image = {
   width: number,
 }
 
-type Album = {
+export type Album = {
   total_tracks: number,
-  external_urls: string[],
+  external_urls: External_Url,
   images: Image[],
   name: string,
 }
@@ -44,14 +48,16 @@ export const ReleaseSection: FC = () => {
   }, [])
 
   return (
-    <Section id="release" title="Ultimos lançamentos" >
-      <CardWrapper>
-        {albums?.items.map((album) => {
-          return (
-            <ReleaseCard title={album.name} alt="image cover" img={album.images[0].url} />
-          )
-        })}
-      </CardWrapper>
-    </Section>
+    <Suspense fallback={<h1> Loading... </h1>} >
+      <Section id="release" title="Ultimos lançamentos" >
+        <CardWrapper>
+          {albums?.items.map((album) => {
+            return (
+              <ReleaseCard album={album} />
+            )
+          })}
+        </CardWrapper>
+      </Section>
+    </Suspense>
   )
 }

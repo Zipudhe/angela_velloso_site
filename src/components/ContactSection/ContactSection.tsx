@@ -8,8 +8,8 @@ export const ContactSection: FC = () => {
   return (
     <Section id="contatos" title="Contato">
       <ContactWrapper>
-        <Contact title="Durate Velloso" phone="77 777777777" instagram='@duo_arte' />
-        <Contact title="Angela Velloso" phone="77 777777777" instagram="@angela velloso" />
+        <Contact title="Durate Velloso" phone="" instagram='duartestudiomusica' />
+        <Contact title="Angela Velloso" phone="71 9144-4320" instagram="angela_velloso" />
       </ContactWrapper>
     </Section>
   )
