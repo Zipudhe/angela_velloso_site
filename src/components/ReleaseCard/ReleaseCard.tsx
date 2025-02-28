@@ -1,4 +1,4 @@
-import React, { FC, Suspense } from 'react'
+import React, { FC } from 'react'
 import { Card, CardImage, CardTitle } from './style'
 import { Album } from '../ReleaseSection/ReleaseSection'
 

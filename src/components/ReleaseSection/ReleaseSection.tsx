@@ -51,9 +51,9 @@ export const ReleaseSection: FC = () => {
     <Suspense fallback={<h1> Loading... </h1>} >
       <Section id="release" title="Ultimos lançamentos" >
         <CardWrapper>
-          {albums?.items.map((album) => {
+          {albums?.items.map((album, index) => {
             return (
-              <ReleaseCard album={album} />
+              <ReleaseCard key={index} album={album} />
             )
           })}
         </CardWrapper>

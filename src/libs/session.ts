@@ -14,7 +14,6 @@ export const getAuthToken = async () => {
 
   const tokenRequest = new Request('https://accounts.spotify.com/api/token', authRequestConfig)
 
-  let res
   const response = await fetch(tokenRequest)
 
   if (!response.ok) {
@@ -26,7 +25,7 @@ export const getAuthToken = async () => {
   const expires = new Date(Date.now() + expires_in * 1000);
 
   // Create the NextResponse and set the cookie
-  res = NextResponse.next();
+  const res = NextResponse.next();
   res.cookies.set('token', access_token, {
     httpOnly: true,
     expires,
