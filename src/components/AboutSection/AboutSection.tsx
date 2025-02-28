@@ -5,16 +5,14 @@ import React, { FC } from 'react';
 import { TypographParagraph } from '../Typograph'
 import { Section } from '../Section/Section'
 
-const mockedText = `
-Lorem ipsum odor amet, consectetuer adipiscing elit. Natoque integer penatibus cras bibendum hac tincidunt cubilia. Natoque eu auctor vehicula natoque malesuada efficitur blandit dictum. Habitasse fusce facilisi laoreet nascetur at lobortis nostra bibendum. Neque nullam ultricies accumsan himenaeos; habitasse eros efficitur turpis. Nec sed etiam ad facilisi feugiat inceptos aenean imperdiet vitae. Per ridiculus nullam potenti libero at hac ut aliquam. Iaculis et lobortis turpis nunc orci aenean maximus ultricies. Mi bibendum aliquet aliquet eros ornare faucibus nullam donec.
-
-Interdum aliquet phasellus natoque senectus nulla; himenaeos convallis porta. Dapibus eget aliquet morbi imperdiet eget, auctor volutpat ligula vitae. Convallis feugiat per inceptos, sociosqu per tellus. Ad elit facilisi fusce interdum netus venenatis. Dis pellentesque conubia gravida justo ultricies tincidunt? Vel sagittis vulputate dui faucibus vitae et. Condimentum nisi litora morbi lorem phasellus. Adis dictum praesent class finibus enim consequat! Condimentum erat lacus dui; tortor eleifend nostra.
+const aboutText = `
+Angela Velloso compõe, arranja, grava, edita, mixa, leciona, canta MPB, Jazz, e o que mais quiser - como gosta de frisar - para a artista, a voz é um instrumento tal qual outro qualquer, não há hierarquias. Nascida e criada em Salvador-BA, é bacharel em Música Popular na UFBA (1ªlugar) e realizou intercâmbio em Jazz na Alemanha (Musikhochschule Mannheim). Tem em seu projeto solo dois álbuns autorais lançados, e integra com o cantor e compositor Felipe Fatiota a banda Solana Star; seu próprio quarteto de jazz; o coletivo Outras Vozes, o Grupo Ofá (backing vocal), as Quintas Brasileiras e o quinteto de Beto Martins. É premiada como melhor intérprete na categoria Música com Letra do XX Festival da Educadora FM.
 `
 
 export const AboutSection: FC = () => {
 
   return <Section id="sobre" title="ANGELA VELLOSO">
-    <TypographParagraph as="p" > {mockedText} </TypographParagraph>
+    <TypographParagraph as="p" > {aboutText} </TypographParagraph>
   </Section>
 }
 
